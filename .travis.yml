@@ -20,7 +20,9 @@ env:
 matrix:
   allow_failures:
     - env: ANDROID_API=android-21 ANDROID_ABI=x86_64      # Allow ANDROID_ABI=x86_64                             to fail, because as of https://android.googlesource.com/platform/external/qemu/+/4a88987%5E!/ , x86_64 emulation currently requires KVM, and Travis does not provide KVM.
+      os:  linux
     - env: ANDROID_API=android-24 ANDROID_ABI=x86_64
+      os:  linux
 os:
   - linux
   - osx
